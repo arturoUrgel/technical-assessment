@@ -78,9 +78,15 @@ def get_matches():
 
 def getCalculatedMatches():
     calculated_matches = []
+    total_score = 0
     for match in get_matches_from_file():
         score = scoring_rules(match["goals"], match["yellow_cards"], match["shots"])
-        calculated_match = {"team": match["team"], "score": score}
+        total_score = total_score + score
+        calculated_match = {
+            "team": match["team"],
+            "score": score,
+            "totalScore": total_score,
+        }
         calculated_matches.append(calculated_match)
     return calculated_matches
 

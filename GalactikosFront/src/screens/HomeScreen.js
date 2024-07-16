@@ -33,7 +33,7 @@ const HomeScreen = () => {
       setConnection(false);
       toastService.toastError(error);
     } else if (matches) {
-      setScores(matches);
+      setScores(matches?.reverse());
       setSummary(summary);
     }
   }, []);

@@ -17,7 +17,8 @@ const MatchItem = ({item, summary}) => {
       <Text style={styles.scoreLabel}>Match Score</Text>
       <Text style={styles.score}>{item.score}</Text>
       <Text style={styles.scoreLabel}>Total Score</Text>
-      <Text style={styles.score}>{summary.total_score_calculated}</Text>
+      {/* <Text style={styles.score}>{summary.total_score_calculated}</Text> */}
+      <Text style={styles.score}>{item.totalScore}</Text>
     </View>
   );
 };
